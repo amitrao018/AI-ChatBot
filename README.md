@@ -1,70 +1,78 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Memory updated
+Here's a sample README for your project:
 
-## Available Scripts
+AI Chat Assistant with Feedback
+Overview
+This is a ReactJS-based web application that allows users to interact with an AI model. Users can provide feedback during the conversation and after it ends, including thumbs up/down reactions to responses, a rating out of 5, and subjective feedback. Past conversations can be revisited, and feedback can be viewed and filtered. The app also allows toggling between light and dark modes.
 
-In the project directory, you can run:
+Features
+Chat with AI: Users can initiate and engage in a conversation with the AI.
+Feedback Mechanism: Users can:
+Like or dislike individual AI responses (thumbs up/down on hover).
+Provide a rating out of 5 at the end of the conversation.
+Offer subjective feedback on the conversation.
+View Past Conversations: Users can revisit past conversations and view the feedback provided for each.
+Feedback Overview: All feedback points are displayed in a table, with filtering and sorting options based on rating.
+Light/Dark Mode: Toggle between light and dark themes for better user experience.
+Sample Data
+The app uses a custom JSON file to mock the AI model's responses for each user question.
 
-### `npm start`
+Sample JSON Format:
+json
+Copy code
+{
+  "questions": [
+    {
+      "question": "What is the capital of France?",
+      "answer": "The capital of France is Paris."
+    },
+    {
+      "question": "What is the largest ocean?",
+      "answer": "The largest ocean is the Pacific Ocean."
+    }
+  ]
+}
+Setup Instructions
+Prerequisites:
+Node.js (version 14 or higher)
+npm or yarn
+Installation:
+Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+git clone https://github.com/your-username/ai-chat-assistant.git
+cd ai-chat-assistant
+Install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm install
+Run the application:
 
-### `npm test`
+bash
+Copy code
+npm start
+The app will be available at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Technical Choices
+ReactJS: Chosen for its flexibility in building dynamic UIs and its ability to manage state efficiently.
+Material-UI: Used to provide a consistent and responsive design, improving the overall user experience.
+Context API: Implemented for managing global state, including the chat history, feedback, and theme toggling.
+Local Storage: Used to persist past conversations and user feedback so that users can revisit them later.
+Custom JSON File: Mocked AI responses for simplicity and to avoid backend dependencies during development.
+Design Choices
+Responsive Design: The layout adjusts for mobile and desktop views to ensure a seamless experience across devices.
+Feedback Panel: The feedback options are easily accessible and non-intrusive, appearing when users hover over AI responses.
+Light/Dark Mode: A toggleable theme was implemented for better accessibility and user preference.
+Trade-offs
+Simplified Data: Due to time constraints, the AI model's responses are mocked from a static JSON file instead of using a live backend API.
+Limited Filtering Options: The feedback overview table provides basic filtering, but additional complex filtering (e.g., by keywords) could be added with more time.
+Basic UX/UI: While functional, some elements could be further polished for a more polished user experience.
+Future Improvements
+Backend Integration: Integrate with a backend API to generate dynamic AI responses.
+Improved Filtering: Implement more advanced filtering and sorting options for feedback.
+User Authentication: Allow users to log in and track conversations over multiple sessions.
+Deployed Application
+The deployed version of the application is available on Vercel.
